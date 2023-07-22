@@ -10,6 +10,10 @@ import UserPage from './pages/users/UserPage';
 import ProductPage from './pages/products/ProductPage';
 
 function App() {
+  const Layout = () => {
+    return <div className="main"></div>;
+  };
+
   const router = createBrowserRouter([
     {
       path: '/',
