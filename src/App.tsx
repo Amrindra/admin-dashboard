@@ -1,10 +1,12 @@
-import './App.css';
+import './styles/global.scss';
 import Homepage from './pages/homepage/Homepage';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import UserPage from './pages/users/UserPage';
 import ProductPage from './pages/products/ProductPage';
 import Navbar from './components/navbar/Navbar';
 import Menu from './components/menu/Menu';
+import Footer from './components/footer/Footer';
+import Login from './pages/login/Login';
 
 function App() {
   const Layout = () => {
@@ -19,6 +21,7 @@ function App() {
             <Outlet />
           </div>
         </div>
+        <Footer />
       </div>
     );
   };
@@ -27,7 +30,7 @@ function App() {
     {
       path: '/',
       element: <Layout />,
-      chlidren: [
+      children: [
         {
           path: '/',
           element: <Homepage />,
@@ -41,6 +44,10 @@ function App() {
           element: <ProductPage />,
         },
       ],
+    },
+    {
+      path: '/login',
+      element: <Login />,
     },
   ]);
 
