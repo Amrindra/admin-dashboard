@@ -1,4 +1,4 @@
-import './homepage.scss';
+import './Homepage.scss';
 
 const Homepage = () => {
   return <div className="homepage">Homepage</div>;
