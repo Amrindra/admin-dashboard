@@ -1,33 +1,22 @@
 import './SideMenuBar.scss';
 import { Link } from 'react-router-dom';
+import { menu } from '../../utils/data';
 
 const SideMenuBar = () => {
   return (
-    <div className="menu">
-      <div className="item">
-        <span className="title">MAIN</span>
-        <Link to="/" className="list-item">
-          <img src="/homeIcon.svg" alt="homepage Icon" />
-          <span className="list-item-title">Home</span>
-        </Link>
-        <Link to="/" className="list-item">
-          <img src="/profileIcon.svg" alt="homepage Icon" />
-          <span className="list-item-title">Profile</span>
-        </Link>
-      </div>
-
-      <div className="item">
-        <span className="title">MAIN</span>
-        <Link to="/" className="list-item">
-          <img src="/homeIcon.svg" alt="homepage Icon" />
-          <span className="list-item-title">Home</span>
-        </Link>
-        <Link to="/" className="list-item">
-          <img src="/profileIcon.svg" alt="homepage Icon" />
-          <span className="list-item-title">Profile</span>
-        </Link>
-      </div>
-    </div>
+    <nav className="menu">
+      {menu.map((item) => (
+        <div className="item" key={item.id}>
+          <span className="title">{item.title}</span>
+          {item.listItems.map((listItem) => (
+            <Link to="/" className="list-item" key={listItem.id}>
+              <img src={listItem.icon} alt={`${listItem.title} icon`} />
+              <span className="list-item-title">{listItem.title}</span>
+            </Link>
+          ))}
+        </div>
+      ))}
+    </nav>
   );
 };
 
