@@ -1,3 +1,14 @@
-// .homepage {
-//   height: 100vh;
-// }
+@import '../../styles/_variables.scss';
+
+.homepage {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(180px, auto);
+
+  .box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid $soft-bg;
+  }
+}
