@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import UserPage from './pages/users/UserPage';
 import ProductPage from './pages/products/ProductPage';
 import Navbar from './components/navbar/Navbar';
-import Menu from './components/menu/Menu';
+import SideMenuBar from './components/sideMenuBar/SideMenuBar';
 import Footer from './components/footer/Footer';
 import Login from './pages/login/Login';
 
@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <div className="container">
           <div className="menu-container">
-            <Menu />
+            <SideMenuBar />
           </div>
           <div className="content-container">
             <Outlet />

@@ -1,7 +1,7 @@
-import './Menu.scss';
+import './SideMenuBar.scss';
 import { Link } from 'react-router-dom';
 
-const Menu = () => {
+const SideMenuBar = () => {
   return (
     <div className="menu">
       <div className="item">
@@ -31,4 +31,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default SideMenuBar;
