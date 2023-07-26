@@ -13,14 +13,14 @@ const BarChartBox = (props: Props) => {
     <div className="bar-chart-box">
       <h3>{props.title}</h3>
       <div className="chart-wrapper">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart width={150} height={40} data={props.chartData}>
+        <ResponsiveContainer width="100%" height={100}>
+          <BarChart data={props.chartData}>
             <Tooltip
               contentStyle={{ background: '#2a3447', borderRadius: '5px' }}
               labelStyle={{ display: 'none' }}
               cursor={{ fill: 'none' }}
             />
-            <Bar dataKey={props.dataKey} fill="#8884d8" />
+            <Bar dataKey={props.dataKey} fill={props.color} />
           </BarChart>
         </ResponsiveContainer>
       </div>
