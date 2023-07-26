@@ -1,16 +1,6 @@
 import { Link } from 'react-router-dom';
 import './ChartBox.scss';
-import React, { PureComponent } from 'react';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from 'recharts';
+import { Line, LineChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 const ChartBox = () => {
   const data = [
@@ -61,7 +51,7 @@ const ChartBox = () => {
     <div className="chart-box-container">
       <div className="box-info">
         <div className="title-section">
-          <img src="/userIcon.svg" alt="" className="" />
+          <img src="/userIcon.svg" alt="" />
           <span>Total Users</span>
         </div>
         <h3>11.323</h3>
@@ -69,17 +59,17 @@ const ChartBox = () => {
       </div>
 
       <div className="chart-info">
-        <div className="chart">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart width={300} height={100} data={data}>
-              <Line
-                type="monotone"
-                dataKey="pv"
-                stroke="#8884d8"
-                strokeWidth={2}
-              />
-            </LineChart>
-          </ResponsiveContainer>
+        <div className="chart-wrapper">
+          {/* <ResponsiveContainer width="100%" height="100%"> */}
+          <LineChart width={300} height={100} data={data}>
+            <Line
+              type="monotone"
+              dataKey="pv"
+              stroke="#8884d8"
+              strokeWidth={2}
+            />
+          </LineChart>
+          {/* </ResponsiveContainer> */}
         </div>
         <div className="texts">
           <div className="percentage">45%</div>
