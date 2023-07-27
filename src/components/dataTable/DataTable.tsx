@@ -1,6 +1,6 @@
-import "./DataTable.scss"
+import './DataTable.scss';
 
-const DataTable = ()=> {
+const DataTable = () => {
   const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90 },
     {
@@ -32,7 +32,7 @@ const DataTable = ()=> {
         `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
   ];
-  
+
   const rows = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
@@ -44,8 +44,9 @@ const DataTable = ()=> {
     { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
   ];
-  return <div className="data-table">
-    <DataGrid
+  return (
+    <div className="data-table">
+      <DataGrid
         rows={rows}
         columns={columns}
         initialState={{
@@ -59,7 +60,8 @@ const DataTable = ()=> {
         checkboxSelection
         disableRowSelectionOnClick
       />
-  </div>
-}
+    </div>
+  );
+};
 
 export default DataTable;
