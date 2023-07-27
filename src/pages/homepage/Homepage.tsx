@@ -1,3 +1,4 @@
+import AreaChartBox from '../../components/areaChartBox/AreaChartBox';
 import BarChartBox from '../../components/barChartBox/BarChartBox';
 import ChartBox from '../../components/chartBox/ChartBox';
 import PieChartBox from '../../components/pieChartBox/PieChartBox';
@@ -33,7 +34,9 @@ const Homepage = () => {
       <div className="box box6">
         <ChartBox {...chartBoxRevenue} />
       </div>
-      <div className="box box7">Box7</div>
+      <div className="box box7">
+        <AreaChartBox />
+      </div>
       <div className="box box8">
         <BarChartBox {...barChartBoxVisit} />
       </div>
