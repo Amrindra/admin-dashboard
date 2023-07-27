@@ -9,7 +9,7 @@ const SideMenuBar = () => {
         <div className="item" key={item.id}>
           <span className="title">{item.title}</span>
           {item.listItems.map((listItem) => (
-            <Link to="/" className="list-item" key={listItem.id}>
+            <Link to={listItem.url} className="list-item" key={listItem.id}>
               <img src={listItem.icon} alt={`${listItem.title} icon`} />
               <span className="list-item-title">{listItem.title}</span>
             </Link>

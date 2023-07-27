@@ -1,4 +1,10 @@
 import './DataTable.scss';
+import {
+  DataGrid,
+  GridColDef,
+  GridToolbar,
+  GridValueGetterParams,
+} from '@mui/x-data-grid';
 
 const DataTable = () => {
   const columns: GridColDef[] = [
@@ -47,6 +53,7 @@ const DataTable = () => {
   return (
     <div className="data-table">
       <DataGrid
+        className="data-grid"
         rows={rows}
         columns={columns}
         initialState={{
@@ -54,6 +61,13 @@ const DataTable = () => {
             paginationModel: {
               pageSize: 5,
             },
+          },
+        }}
+        slots={{ toolbar: GridToolbar }}
+        slotProps={{
+          toolbar: {
+            showQuickFilter: true,
+            quickFilterProps: { debounceMs: 500 },
           },
         }}
         pageSizeOptions={[5]}
