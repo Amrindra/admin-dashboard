@@ -67,12 +67,16 @@ const DataTable = () => {
         slotProps={{
           toolbar: {
             showQuickFilter: true,
+            // by passing quickFilterProps: { debounceMs: 500 }, it helps to delay the immidate search, instead it will wait for 500ms before searching
             quickFilterProps: { debounceMs: 500 },
           },
         }}
         pageSizeOptions={[5]}
         checkboxSelection
         disableRowSelectionOnClick
+        disableColumnFilter
+        disableColumnSelector
+        disableDensitySelector
       />
     </div>
   );
