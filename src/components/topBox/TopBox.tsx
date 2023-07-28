@@ -1,5 +1,5 @@
-import './TopBox.scss';
-import { topDealUsers } from '../../utils/data';
+import "./TopBox.scss";
+import { topDealUsers } from "../../utils/data";
 
 const TopBox = () => {
   return (
@@ -7,7 +7,7 @@ const TopBox = () => {
       <h1>Top Deals</h1>
       <div className="list">
         {topDealUsers.map((user) => (
-          <div className="listItem">
+          <div className="listItem" key={user.id}>
             <div className="user-wrapper">
               <img src={user.img} alt={`${user.username} profile picture`} />
               <div className="user-texts">
