@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import "./DataTable.scss";
-import {
-  DataGrid,
-  GridColDef,
-  GridToolbar,
-  GridValueGetterParams,
-} from "@mui/x-data-grid";
+import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 
 type Props = {
   columns: GridColDef[];

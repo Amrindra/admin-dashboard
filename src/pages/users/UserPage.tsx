@@ -3,7 +3,7 @@ import DataTable from "../../components/dataTable/DataTable";
 import "./UserPage.scss";
 import { userRows } from "../../utils/data";
 import { useState } from "react";
-import AddUser from "../../components/addUser/AddUser";
+import Add from "../../components/add/Add";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -83,9 +83,7 @@ const UserPage = () => {
       </div>
       {/* Pass users via slug so that when user clicks on action view icon it will show the slug as users and ID */}
       <DataTable columns={columns} rows={userRows} slug="users" />
-      {isOpen && (
-        <AddUser slug="user" columns={columns} setIsOpen={setIsOpen} />
-      )}
+      {isOpen && <Add slug="user" columns={columns} setIsOpen={setIsOpen} />}
     </div>
   );
 };
