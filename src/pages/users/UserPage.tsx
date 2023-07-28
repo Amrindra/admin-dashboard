@@ -13,6 +13,7 @@ const UserPage = () => {
       renderCell: (params) => {
         return (
           <img
+            // If there are no user image, show avatar icon instead
             src={
               params.row.img ||
               'https://img.icons8.com/nolan/64/user-default.png'
