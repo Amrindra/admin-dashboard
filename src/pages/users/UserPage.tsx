@@ -74,7 +74,7 @@ const UserPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="userPage">
+    <div className="user-page">
       <div className="info">
         <h1>Users</h1>
         <button className="add-new-user" onClick={() => setIsOpen(true)}>

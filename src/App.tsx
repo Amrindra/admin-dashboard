@@ -1,12 +1,14 @@
-import './styles/global.scss';
-import Homepage from './pages/homepage/Homepage';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import UserPage from './pages/users/UserPage';
-import ProductPage from './pages/products/ProductPage';
-import Navbar from './components/navbar/Navbar';
-import SideMenuBar from './components/sideMenuBar/SideMenuBar';
-import Footer from './components/footer/Footer';
-import Login from './pages/login/Login';
+import "./styles/global.scss";
+import Homepage from "./pages/homepage/Homepage";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import UserPage from "./pages/users/UserPage";
+import ProductPage from "./pages/products/ProductPage";
+import Navbar from "./components/navbar/Navbar";
+import SideMenuBar from "./components/sideMenuBar/SideMenuBar";
+import Footer from "./components/footer/Footer";
+import Login from "./pages/login/Login";
+import SingleUserPage from "./pages/singleUser/SingleUserPage";
+import SingleProductPage from "./pages/singleProduct/SingleProductPage";
 
 function App() {
   const Layout = () => {
@@ -28,25 +30,33 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <Layout />,
       children: [
         {
-          path: '/',
+          path: "/",
           element: <Homepage />,
         },
         {
-          path: '/users',
+          path: "/users",
           element: <UserPage />,
         },
         {
-          path: '/products',
+          path: "/users/:id",
+          element: <SingleUserPage />,
+        },
+        {
+          path: "/products",
           element: <ProductPage />,
+        },
+        {
+          path: "/products/:id",
+          element: <SingleProductPage />,
         },
       ],
     },
     {
-      path: '/login',
+      path: "/login",
       element: <Login />,
     },
   ]);

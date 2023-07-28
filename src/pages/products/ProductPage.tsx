@@ -65,7 +65,7 @@ const ProductPage = () => {
         </button>
       </div>
       {/* Pass users via slug so that when user clicks on action view icon it will show the slug as users and ID */}
-      <DataTable columns={columns} rows={products} slug="users" />
+      <DataTable columns={columns} rows={products} slug="products" />
       {isOpen && <Add slug="product" columns={columns} setIsOpen={setIsOpen} />}
     </div>
   );
