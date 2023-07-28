@@ -11,9 +11,7 @@
   img {
     height: 30px;
     width: 30px;
-
-    svg {
-      fill: red;
-    }
+    border-radius: 50%;
+    object-fit: cover;
   }
 }
