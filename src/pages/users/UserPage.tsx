@@ -8,7 +8,7 @@ import AddUser from "../../components/addUser/AddUser";
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
   {
-    field: "avatar",
+    field: "img",
     headerName: "Avatar",
     width: 100,
     renderCell: (params) => {
@@ -49,15 +49,15 @@ const columns: GridColDef[] = [
   },
   {
     field: "createdAt",
+    type: "string",
     headerName: "Created At",
     width: 200,
-    type: "string",
   },
   {
     field: "verified",
+    type: "boolean",
     headerName: "Verified",
     width: 150,
-    type: "boolean",
   },
   // {
   //   field: 'fullName',
@@ -77,7 +77,9 @@ const UserPage = () => {
     <div className="userPage">
       <div className="info">
         <h1>Users</h1>
-        <button className="add-new-user">Add New User</button>
+        <button className="add-new-user" onClick={() => setIsOpen(true)}>
+          Add New User
+        </button>
       </div>
       {/* Pass users via slug so that when user clicks on action view icon it will show the slug as users and ID */}
       <DataTable columns={columns} rows={userRows} slug="users" />
