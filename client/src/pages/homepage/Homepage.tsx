@@ -1,8 +1,8 @@
-import AreaChartBox from '../../components/areaChartBox/AreaChartBox';
-import BarChartBox from '../../components/barChartBox/BarChartBox';
-import ChartBox from '../../components/chartBox/ChartBox';
-import PieChartBox from '../../components/pieChartBox/PieChartBox';
-import TopBox from '../../components/topBox/TopBox';
+import AreaChartBox from "../../components/areaChartBox/AreaChartBox";
+import BarChartBox from "../../components/barChartBox/BarChartBox";
+import ChartBox from "../../components/chartBox/ChartBox";
+import PieChartBox from "../../components/pieChartBox/PieChartBox";
+import TopBox from "../../components/topBox/TopBox";
 import {
   barChartBoxRevenue,
   barChartBoxVisit,
@@ -10,23 +10,24 @@ import {
   chartBoxProduct,
   chartBoxRevenue,
   chartBoxUser,
-} from '../../utils/data';
-import './Homepage.scss';
+} from "../../utils/data";
+import "./Homepage.scss";
 
 const Homepage = () => {
   return (
     <div className="homepage">
       <div className="box box1">
-        <TopBox />
+        <PieChartBox />
       </div>
       <div className="box box2">
-        <ChartBox {...chartBoxUser} />
+        {/* <ChartBox {...chartBoxUser} /> */}
+        <AreaChartBox />
       </div>
       <div className="box box3">
         <ChartBox {...chartBoxProduct} />
       </div>
       <div className="box box4">
-        <PieChartBox />
+        <TopBox />
       </div>
       <div className="box box5">
         <ChartBox {...chartBoxConversion} />
@@ -35,7 +36,8 @@ const Homepage = () => {
         <ChartBox {...chartBoxRevenue} />
       </div>
       <div className="box box7">
-        <AreaChartBox />
+        {/* <AreaChartBox /> */}
+        <ChartBox {...chartBoxUser} />
       </div>
       <div className="box box8">
         <BarChartBox {...barChartBoxVisit} />

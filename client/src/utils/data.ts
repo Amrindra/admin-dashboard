@@ -693,7 +693,7 @@ export const singleProduct = {
   activities: [
     {
       text: 'John Doe purchased Playstation 5 Digital Edition',
-      time: '3 day ago',
+      time: '3 days ago',
     },
     {
       text: 'Jane Doe added Playstation 5 Digital Edition into their wishlist',
