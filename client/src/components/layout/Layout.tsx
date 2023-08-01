@@ -3,6 +3,9 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import SideMenuBar from "../sideMenuBar/SideMenuBar";
 import Footer from "../footer/Footer";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const Layout = () => {
   return (
@@ -13,7 +16,9 @@ const Layout = () => {
           <SideMenuBar />
         </div>
         <div className="content-container">
-          <Outlet />
+          <QueryClientProvider client={queryClient}>
+            <Outlet />
+          </QueryClientProvider>
         </div>
       </div>
       <Footer />

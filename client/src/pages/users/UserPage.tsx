@@ -4,6 +4,7 @@ import "./UserPage.scss";
 import { userRows } from "../../utils/data";
 import { useState } from "react";
 import Add from "../../components/add/Add";
+import { useQuery } from "@tanstack/react-query";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -73,6 +74,12 @@ const columns: GridColDef[] = [
 const UserPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const { isLoading, data } = useQuery({
+    queryKey: ["allusers"],
+    queryFn: () =>
+      fetch("http://localhost:8800/api/users").then((res) => res.json()),
+  });
+
   return (
     <div className="user-page">
       <div className="info">
@@ -82,7 +89,11 @@ const UserPage = () => {
         </button>
       </div>
       {/* Pass users via slug so that when user clicks on action view icon it will show the slug as users and ID */}
-      <DataTable columns={columns} rows={userRows} slug="users" />
+      {isLoading ? (
+        "Loading..."
+      ) : (
+        <DataTable columns={columns} rows={data} slug="users" />
+      )}
       {isOpen && <Add slug="user" columns={columns} setIsOpen={setIsOpen} />}
     </div>
   );
