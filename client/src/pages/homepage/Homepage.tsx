@@ -20,7 +20,6 @@ const Homepage = () => {
         <PieChartBox />
       </div>
       <div className="box box2">
-        {/* <ChartBox {...chartBoxUser} /> */}
         <AreaChartBox />
       </div>
       <div className="box box3">

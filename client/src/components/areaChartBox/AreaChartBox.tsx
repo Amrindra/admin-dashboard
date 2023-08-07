@@ -5,49 +5,49 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from 'recharts';
-import './AreaChartBox.scss';
+} from "recharts";
+import "./AreaChartBox.scss";
 
 const AreaChartBox = () => {
   const data = [
     {
-      name: 'Sun',
+      name: "Sun",
       books: 4000,
       clothes: 2400,
       electronic: 2400,
     },
     {
-      name: 'Mon',
+      name: "Mon",
       books: 3000,
       clothes: 1398,
       electronic: 2210,
     },
     {
-      name: 'Tue',
+      name: "Tue",
       books: 2000,
       clothes: 9800,
       electronic: 2290,
     },
     {
-      name: 'Wed',
+      name: "Wed",
       books: 2780,
       clothes: 3908,
       electronic: 2000,
     },
     {
-      name: 'Thu',
+      name: "Thu",
       books: 1890,
       clothes: 4800,
       electronic: 2181,
     },
     {
-      name: 'Fri',
+      name: "Fri",
       books: 2390,
       clothes: 3800,
       electronic: 2500,
     },
     {
-      name: 'Sat',
+      name: "Sat",
       books: 3490,
       clothes: 4300,
       electronic: 2100,
@@ -56,7 +56,7 @@ const AreaChartBox = () => {
 
   return (
     <div className="area-chart-box">
-      <h1>Revenue</h1>
+      <h3>Revenue</h3>
       <div className="chart-wrapper">
         <ResponsiveContainer width="99%" height="100%">
           <AreaChart
@@ -82,15 +82,15 @@ const AreaChartBox = () => {
               type="monotone"
               dataKey="clothes"
               stackId="1"
-              stroke="#82ca9d"
-              fill="#82ca9d"
+              stroke="#20AA21"
+              fill="#20AA21"
             />
             <Area
               type="monotone"
               dataKey="books"
               stackId="1"
-              stroke="#ffc658"
-              fill="#ffc658"
+              stroke="#fbd079"
+              fill="#ffd98e"
             />
           </AreaChart>
         </ResponsiveContainer>

@@ -1,6 +1,12 @@
+@import '../../styles/responsive.scss';
+
 .top-box {
-  h1 {
+  h3 {
     margin-bottom: 20px;
+
+    @include xxl{
+      font-size: 24px;
+    }
   }
 
   .list {
@@ -33,6 +39,14 @@
 
           .email {
             font-style: 12px;
+
+            @include xxl{
+              display: none;
+            }
+
+            @include xxl{
+              display: block;
+            }
           }
         }
       }

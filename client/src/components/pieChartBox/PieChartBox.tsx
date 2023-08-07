@@ -1,27 +1,27 @@
-import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
-import './PieChartBox.scss';
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import "./PieChartBox.scss";
 
 const PieChartBox = () => {
   const data = [
-    { name: 'Mobile', value: 400, color: '#0088FE' },
-    { name: 'Desktop', value: 300, color: '#00C49F' },
-    { name: 'Laptop', value: 300, color: '#FFBB28' },
-    { name: 'Tablet', value: 200, color: '#FF8042' },
+    { name: "Mobile", value: 400, color: "#0088FE" },
+    { name: "Desktop", value: 300, color: "#00C49F" },
+    { name: "Laptop", value: 300, color: "#FFBB28" },
+    { name: "Tablet", value: 200, color: "#FF8042" },
   ];
 
   return (
     <div className="pie-chart-box-container">
-      <h3>Beads by Source</h3>
+      <h3>Leads by Source</h3>
       <div className="chart-wrapper">
         <ResponsiveContainer width="99%" height={300}>
           <PieChart>
             <Tooltip
-              contentStyle={{ background: 'white', borderRadius: '5px' }}
+              contentStyle={{ background: "white", borderRadius: "5px" }}
             />
             <Pie
               data={data}
-              innerRadius={'70%'}
-              outerRadius={'90%'}
+              innerRadius={"70%"}
+              outerRadius={"90%"}
               paddingAngle={5}
               dataKey="value"
             >
