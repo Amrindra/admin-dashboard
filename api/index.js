@@ -313,4 +313,4 @@ if (process.env.API_PORT) {
 }
 
 // by exporting the app, we tell the server to grab all the app endpoint
-module.exports = app;
+export default app;
