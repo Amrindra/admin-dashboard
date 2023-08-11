@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <Link to="/">
-          <img src="/logoIcon.svg" alt="" className="icon logo-image" />
+          {/* <img src="/logoIcon.svg" alt="" className="icon logo-image" /> */}
           <span>Amrindra</span>
         </Link>
       </div>

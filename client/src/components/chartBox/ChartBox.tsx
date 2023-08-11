@@ -15,17 +15,6 @@ type Props = {
 const ChartBox = (props: Props) => {
   return (
     <div className="chart-box-container">
-      <div className="box-info">
-        <div className="title-section">
-          <img src={props.icon} alt="" />
-          <span>{props.title}</span>
-        </div>
-        <h3>{props.number}</h3>
-        <Link to="/" style={{ color: props.color }}>
-          View All
-        </Link>
-      </div>
-
       <div className="chart-info">
         <div className="chart-wrapper">
           <ResponsiveContainer width="100%" height="100%">
@@ -54,6 +43,17 @@ const ChartBox = (props: Props) => {
           </span>
           <span className="duration">This month</span>
         </div>
+      </div>
+
+      <div className="box-info">
+        <div className="title-section">
+          {/* <img src={props.icon} alt="" /> */}
+          <h6>{props.title}</h6>
+        </div>
+        <p>{props.number}</p>
+        <Link to="/" style={{ color: props.color }}>
+          View All
+        </Link>
       </div>
     </div>
   );

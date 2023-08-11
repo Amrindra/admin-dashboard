@@ -1,4 +1,8 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/responsive.scss";
+
 .user-page{
+
   .info{
     display: flex;
     align-items: center;
@@ -6,8 +10,17 @@
     margin-bottom: 20px;
 
     button{
-      padding: 5px;
-      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: 2px solid $main-color;
+      color: $main-color;
+      border-radius: 10px;
+      
+      &:hover{
+        background-color: $main-color;
+        color: $main-bg;
+        cursor: pointer;
+      }
     }
   }
 }

@@ -33,86 +33,86 @@ export const menu = [
         url: '/products',
         icon: 'productIcon.svg',
       },
-      {
-        id: 3,
-        title: 'Orders',
-        url: '/orders',
-        icon: 'orderIcon.svg',
-      },
-      {
-        id: 4,
-        title: 'Posts',
-        url: '/posts',
-        icon: 'post2Icon.svg',
-      },
+      // {
+      //   id: 3,
+      //   title: 'Orders',
+      //   url: '/orders',
+      //   icon: 'orderIcon.svg',
+      // },
+      // {
+      //   id: 4,
+      //   title: 'Posts',
+      //   url: '/posts',
+      //   icon: 'post2Icon.svg',
+      // },
     ],
   },
-  {
-    id: 3,
-    title: 'general',
-    listItems: [
-      {
-        id: 1,
-        title: 'Elements',
-        url: '/',
-        icon: 'elementIcon.svg',
-      },
-      {
-        id: 2,
-        title: 'Notes',
-        url: '/',
-        icon: 'noteIcon.svg',
-      },
-      {
-        id: 3,
-        title: 'Forms',
-        url: '/',
-        icon: 'formIcon.svg',
-      },
-      {
-        id: 4,
-        title: 'Calendar',
-        url: '/',
-        icon: 'calendarIcon.svg',
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: 'Maintenance',
-    listItems: [
-      {
-        id: 1,
-        title: 'Settings',
-        url: '/',
-        icon: 'settingIcon.svg',
-      },
-      {
-        id: 2,
-        title: 'Backups',
-        url: '/',
-        icon: 'backupIcon.svg',
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: 'analytics',
-    listItems: [
-      {
-        id: 1,
-        title: 'Charts',
-        url: '/',
-        icon: 'chartIcon.svg',
-      },
-      {
-        id: 2,
-        title: 'Logs',
-        url: '/',
-        icon: 'logIcon.svg',
-      },
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: 'general',
+  //   listItems: [
+  //     {
+  //       id: 1,
+  //       title: 'Elements',
+  //       url: '/',
+  //       icon: 'elementIcon.svg',
+  //     },
+  //     {
+  //       id: 2,
+  //       title: 'Notes',
+  //       url: '/',
+  //       icon: 'noteIcon.svg',
+  //     },
+  //     {
+  //       id: 3,
+  //       title: 'Forms',
+  //       url: '/',
+  //       icon: 'formIcon.svg',
+  //     },
+  //     {
+  //       id: 4,
+  //       title: 'Calendar',
+  //       url: '/',
+  //       icon: 'calendarIcon.svg',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Maintenance',
+  //   listItems: [
+  //     {
+  //       id: 1,
+  //       title: 'Settings',
+  //       url: '/',
+  //       icon: 'settingIcon.svg',
+  //     },
+  //     {
+  //       id: 2,
+  //       title: 'Backups',
+  //       url: '/',
+  //       icon: 'backupIcon.svg',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 5,
+  //   title: 'analytics',
+  //   listItems: [
+  //     {
+  //       id: 1,
+  //       title: 'Charts',
+  //       url: '/',
+  //       icon: 'chartIcon.svg',
+  //     },
+  //     {
+  //       id: 2,
+  //       title: 'Logs',
+  //       url: '/',
+  //       icon: 'logIcon.svg',
+  //     },
+  //   ],
+  // },
 ];
 
 export const topDealUsers = [

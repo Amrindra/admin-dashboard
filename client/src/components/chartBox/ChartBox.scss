@@ -8,35 +8,8 @@
     flex-direction: column;
   }
 
-  .box-info {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @include sm{
-      gap: 20px;
-    }
-
-    .title-section {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      @include xxl{
-        font-size: 14px;
-      }
-    }
-
-    h3{
-      @include xxl{
-        font-size: 15px;
-      }
-    }
-  }
-
   .chart-info {
-    flex: 2;
+    flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +22,7 @@
     .texts {
       display: flex;
       flex-direction: column;
-      text-align: right;
+      text-align: left;
 
       .percentage {
         font-weight: bold;
@@ -62,6 +35,38 @@
 
       .duration {
         font-size: 14px;
+      }
+    }
+  }
+
+  .box-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    @include sm{
+      gap: 20px;
+    }
+    
+    .title-section {
+      display: flex;
+      gap: 10px;
+
+      h6{
+        font-size: 14px;
+        text-align: right;
+      }
+
+      @include xxl{
+        font-size: 14px;
+      }
+    }
+
+    h3{
+      @include xxl{
+        font-size: 15px;
       }
     }
   }

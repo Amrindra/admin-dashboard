@@ -58,7 +58,7 @@ const AreaChartBox = () => {
     <div className="area-chart-box">
       <h3>Revenue</h3>
       <div className="chart-wrapper">
-        <ResponsiveContainer width="99%" height="100%">
+        <ResponsiveContainer width={"99%"} height={200}>
           <AreaChart
             data={data}
             margin={{
@@ -75,22 +75,22 @@ const AreaChartBox = () => {
               type="monotone"
               dataKey="electronic"
               stackId="1"
-              stroke="#8884d8"
-              fill="#8884d8"
+              stroke="#209ff6"
+              fill="#209ff6"
             />
             <Area
               type="monotone"
               dataKey="clothes"
               stackId="1"
-              stroke="#20AA21"
-              fill="#20AA21"
+              stroke="#62b638"
+              fill="#62b638"
             />
             <Area
               type="monotone"
               dataKey="books"
               stackId="1"
-              stroke="#fbd079"
-              fill="#ffd98e"
+              stroke="#FFBB28"
+              fill="#FFBB28"
             />
           </AreaChart>
         </ResponsiveContainer>

@@ -76,7 +76,9 @@ const UserPage = () => {
   const { isLoading, data } = useQuery({
     queryKey: ["allusers"],
     queryFn: () =>
-      fetch("http://localhost:8800/api/users").then((res) => res.json()),
+      fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/users`).then((res) =>
+        res.json()
+      ),
   });
 
   return (

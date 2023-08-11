@@ -3,17 +3,36 @@ import "./PieChartBox.scss";
 
 const PieChartBox = () => {
   const data = [
-    { name: "Mobile", value: 400, color: "#0088FE" },
-    { name: "Desktop", value: 300, color: "#00C49F" },
+    { name: "Mobile", value: 400, color: "#209ff6" },
+    { name: "Desktop", value: 300, color: "#62b638" },
     { name: "Laptop", value: 300, color: "#FFBB28" },
-    { name: "Tablet", value: 200, color: "#FF8042" },
+    { name: "Tablet", value: 200, color: "#f42d2d" },
   ];
 
   return (
     <div className="pie-chart-box-container">
       <h3>Leads by Source</h3>
       <div className="chart-wrapper">
-        <ResponsiveContainer width="99%" height={300}>
+        <ResponsiveContainer width="100%" height={200}>
+          <PieChart>
+            <Tooltip
+              contentStyle={{ background: "white", borderRadius: "5px" }}
+            />
+            <Pie
+              data={data}
+              labelLine={false}
+              // label={renderCustomizedLabel}
+              outerRadius={80}
+              fill="#8884d8"
+              dataKey="value"
+            >
+              {data.map((item) => (
+                <Cell key={item.name} fill={item.color} />
+              ))}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+        {/* <ResponsiveContainer width="99%" height={300}>
           <PieChart>
             <Tooltip
               contentStyle={{ background: "white", borderRadius: "5px" }}
@@ -30,7 +49,7 @@ const PieChartBox = () => {
               ))}
             </Pie>
           </PieChart>
-        </ResponsiveContainer>
+        </ResponsiveContainer> */}
       </div>
 
       <div className="options">

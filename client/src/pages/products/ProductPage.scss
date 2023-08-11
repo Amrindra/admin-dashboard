@@ -1,13 +1,34 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/_variables";
+
 .product-page{
+
     .info{
       display: flex;
       align-items: center;
       gap: 20px;
       margin-bottom: 20px;
+
+      @include md{
+        gap: 10px;
+
+        h1{
+          font-size: 24px;
+        }
+      }
   
       button{
-        padding: 5px;
-        cursor: pointer;
+        padding: 8px;
+        background: none;
+        border: 2px solid $main-color;
+        color: $main-color;
+        border-radius: 10px;
+        
+        &:hover{
+          background-color: $main-color;
+          color: $main-bg;
+          cursor: pointer;
+        }
       }
     }
   }

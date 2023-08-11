@@ -14,7 +14,7 @@ const DataTable = ({ columns, rows, slug }: Props) => {
   // When this mutation succeeds, invalidate any queries with the `` query key
   const mutation = useMutation({
     mutationFn: (id: number) => {
-      return fetch(`http://localhost:8800/api/${slug}/${id}`, {
+      return fetch(`import.meta.env.VITE_REACT_APP_API_URL/${slug}/${id}`, {
         method: "delete",
       });
     },

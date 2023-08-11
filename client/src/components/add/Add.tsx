@@ -13,7 +13,7 @@ const Add = ({ slug, columns, setIsOpen }: Props) => {
   // When this mutation succeeds, invalidate any queries with the `` query key
   const mutation = useMutation({
     mutationFn: () => {
-      return fetch(`http://localhost:8800/api/${slug}s`, {
+      return fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/${slug}s`, {
         method: "post",
         headers: {
           Accept: "application/json",
