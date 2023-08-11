@@ -305,6 +305,12 @@ app.delete("/api/products/:id", (req, res) => {
   res.json("Product deleted!");
 });
 
-app.listen(process.env.API_PORT, () => {
-  console.log("Connected to backend.");
-});
+// This only works on localhost or localmacine once we deploy to the server it won't work
+if (process.env.API_PORT) {
+  app.listen(process.env.API_PORT, () => {
+    console.log("Connected to the backend server!");
+  });
+}
+
+// by exporting the app, we tell the server to grab all the app endpoint
+module.exports = app;
