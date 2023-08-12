@@ -81,6 +81,8 @@ const UserPage = () => {
       ),
   });
 
+  console.log(`${import.meta.env.VITE_REACT_APP_API_URL}/users`);
+
   return (
     <div className="user-page">
       <div className="info">
