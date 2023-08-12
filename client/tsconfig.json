@@ -11,6 +11,7 @@
     // Swithcing "moduleResolution": "bundler" to "moduleResolution": "node" solved the warning sign
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
