@@ -1,6 +1,7 @@
 import { GridColDef } from "@mui/x-data-grid";
 import "./Add.scss";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useState } from "react";
 
 type Props = {
   slug: string;
@@ -9,27 +10,46 @@ type Props = {
 };
 
 const Add = ({ slug, columns, setIsOpen }: Props) => {
+  const [formValue, setFormValue] = useState({
+    id: "",
+    img: "",
+    lastName: "",
+    firstName: "",
+    email: "",
+    phone: "",
+    createdAt: "",
+    verified: Boolean,
+  });
+
+  const LOCALHOST = import.meta.env.VITE_REACT_APP_API_URL_LOCAL;
+  const FROMSERVER = import.meta.env.VITE_REACT_APP_API_URL_SERVER;
+
+  // console.log(columns);
+
   const queryClient = useQueryClient();
   // When this mutation succeeds, invalidate any queries with the `` query key
   const mutation = useMutation({
     mutationFn: () => {
-      return fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/${slug}s`, {
-        method: "post",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          id: 111,
-          img: "",
-          lastName: "Hello",
-          firstName: "Test",
-          email: "testme@gmail.com",
-          phone: "123 456 789",
-          createdAt: "01.02.2023",
-          verified: true,
-        }),
-      });
+      return fetch(
+        FROMSERVER ? `${LOCALHOST}/${slug}s` : `${FROMSERVER}/${slug}s`,
+        {
+          method: "post",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: 111,
+            img: "",
+            lastName: formValue.lastName,
+            firstName: formValue.firstName,
+            email: formValue.email,
+            phone: formValue.phone,
+            createdAt: formValue.createdAt,
+            verified: formValue.verified,
+          }),
+        }
+      );
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [`all${slug}s`] });
@@ -43,6 +63,16 @@ const Add = ({ slug, columns, setIsOpen }: Props) => {
     // Telling modal page to close after submitting user
     setIsOpen(false);
   };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormValue((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // console.log(formValue);
 
   return (
     <div className="add-user">
@@ -58,7 +88,12 @@ const Add = ({ slug, columns, setIsOpen }: Props) => {
             .map((column) => (
               <div className="item">
                 <label>{column.headerName}</label>
-                <input type={column.type} placeholder={column.field} />
+                <input
+                  type={column.type}
+                  placeholder={column.field}
+                  name={column.field}
+                  onChange={handleChange}
+                />
               </div>
             ))}
           <button type="submit">Submit</button>

@@ -73,15 +73,18 @@ const columns: GridColDef[] = [
 const UserPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const LOCALHOST = import.meta.env.VITE_REACT_APP_API_URL_LOCAL;
+  const FROMSERVER = import.meta.env.VITE_REACT_APP_API_URL_SERVERs;
+
   const { isLoading, data } = useQuery({
     queryKey: ["allusers"],
     queryFn: () =>
-      fetch(`${import.meta.env.VITE_REACT_APP_API_URL}/users`).then((res) =>
-        res.json()
+      fetch(FROMSERVER ? `${FROMSERVER}/users` : `${LOCALHOST}/users`).then(
+        (res) => res.json()
       ),
   });
 
-  console.log(`${import.meta.env.VITE_REACT_APP_API_URL}/users`);
+  // console.log(`${import.meta.env.VITE_REACT_APP_API_URL}/users`);
 
   return (
     <div className="user-page">
