@@ -10,21 +10,16 @@ type Props = {
 };
 
 const DataTable = ({ columns, rows, slug }: Props) => {
-  const LOCALHOST = import.meta.env.VITE_REACT_APP_API_URL_LOCAL;
+  // const LOCALHOST = import.meta.env.VITE_REACT_APP_API_URL_LOCAL;
   const FROMSERVER = import.meta.env.VITE_REACT_APP_API_URL_SERVER;
 
   const queryClient = useQueryClient();
   // When this mutation succeeds, invalidate any queries with the `` query key
   const mutation = useMutation({
     mutationFn: (id: number) => {
-      return fetch(
-        FROMSERVER
-          ? `${LOCALHOST}/${slug}/${id}`
-          : `${FROMSERVER}/${slug}/${id}`,
-        {
-          method: "delete",
-        }
-      );
+      return fetch(`${FROMSERVER}/${slug}/${id}`, {
+        method: "delete",
+      });
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [`all${slug}`] });

@@ -21,7 +21,7 @@ const Add = ({ slug, columns, setIsOpen }: Props) => {
     verified: Boolean,
   });
 
-  const LOCALHOST = import.meta.env.VITE_REACT_APP_API_URL_LOCAL;
+  // const LOCALHOST = import.meta.env.VITE_REACT_APP_API_URL_LOCAL;
   const FROMSERVER = import.meta.env.VITE_REACT_APP_API_URL_SERVER;
 
   // console.log(columns);
@@ -30,26 +30,23 @@ const Add = ({ slug, columns, setIsOpen }: Props) => {
   // When this mutation succeeds, invalidate any queries with the `` query key
   const mutation = useMutation({
     mutationFn: () => {
-      return fetch(
-        FROMSERVER ? `${LOCALHOST}/${slug}s` : `${FROMSERVER}/${slug}s`,
-        {
-          method: "post",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            id: 111,
-            img: "",
-            lastName: formValue.lastName,
-            firstName: formValue.firstName,
-            email: formValue.email,
-            phone: formValue.phone,
-            createdAt: formValue.createdAt,
-            verified: formValue.verified,
-          }),
-        }
-      );
+      return fetch(`${FROMSERVER}/${slug}s`, {
+        method: "post",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: 111,
+          img: "",
+          lastName: formValue.lastName,
+          firstName: formValue.firstName,
+          email: formValue.email,
+          phone: formValue.phone,
+          createdAt: formValue.createdAt,
+          verified: formValue.verified,
+        }),
+      });
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [`all${slug}s`] });
