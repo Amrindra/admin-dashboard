@@ -81,7 +81,8 @@ const UserPage = () => {
     queryFn: () => fetch(`${FROMSERVER}/users`).then((res) => res.json()),
   });
 
-  // console.log(`${import.meta.env.VITE_REACT_APP_API_URL}/users`);
+  console.log(`${import.meta.env.VITE_REACT_APP_API_URL}/users`);
+  console.log(FROMSERVER);
 
   return (
     <div className="user-page">
