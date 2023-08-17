@@ -12,8 +12,8 @@ export const menu = [
       {
         id: 2,
         title: 'Profile',
-        url: '/users/1',
-        icon: 'userIcon.svg',
+        url: '/profile/1',
+        icon: 'profileIcon.svg',
       },
     ],
   },
@@ -118,51 +118,51 @@ export const menu = [
 export const topDealUsers = [
   {
     id: 1,
-    img: 'https://images.pexels.com/photos/8405873/pexels-photo-8405873.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
-    username: 'Elva McDonald',
-    email: 'elva@gmail.com',
+    img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+    username: 'John Doe',
+    email: 'john.doe@example.com',
     amount: '3.668',
   },
   {
     id: 2,
-    img: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    username: 'Linnie Nelson',
-    email: 'linnie@gmail.com',
+    img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+    username: 'Jane Smith',
+    email: ' jane.smith@example.com',
     amount: '3.256',
   },
   {
     id: 3,
-    img: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    username: 'Brent Reeves',
-    email: 'brent@gmail.com',
+    img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+    username: 'Michael Johnson',
+    email: 'michael.johnson@example.com',
     amount: '2.998',
   },
   {
     id: 4,
-    img: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    username: 'Adeline Watson',
-    email: 'adeline@gmail.com',
+    img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+    username: 'Emily Williams',
+    email: 'emily.williams@example.com',
     amount: '2.512',
   },
   {
     id: 5,
-    img: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    username: 'Juan Harrington',
-    email: 'juan@gmail.com',
+    img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+    username: 'David Brown',
+    email: ' david.brown@example.com',
     amount: '2.134',
   },
   {
     id: 6,
-    img: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    username: 'Augusta McGee',
-    email: 'augusta@gmail.com',
+    img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+    username: 'Olivia Miller',
+    email: 'olivia.miller@example.com',
     amount: '1.932',
   },
   {
     id: 7,
-    img: 'https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    username: 'Angel Thomas',
-    email: 'angel@gmail.com',
+    img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
+    username: 'William Taylor',
+    email: 'william.taylor@example.com',
     amount: '1.560',
   },
 ];
@@ -239,7 +239,7 @@ export const chartBoxConversion = {
 
 export const barChartBoxRevenue = {
   title: 'Profit Earned',
-  color: '#8884d8',
+  color: '#13bfa3',
   dataKey: 'profit',
   chartData: [
     {
@@ -275,7 +275,7 @@ export const barChartBoxRevenue = {
 
 export const barChartBoxVisit = {
   title: 'Total Visit',
-  color: '#FF8042',
+  color: '#32a852',
   dataKey: 'visit',
   chartData: [
     {

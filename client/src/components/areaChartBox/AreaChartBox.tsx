@@ -12,32 +12,32 @@ const AreaChartBox = () => {
   const data = [
     {
       name: "Sun",
-      books: 4000,
+      books: 2000,
       clothes: 2400,
       electronic: 2400,
     },
     {
       name: "Mon",
-      books: 3000,
+      books: 9000,
       clothes: 1398,
       electronic: 2210,
     },
     {
       name: "Tue",
-      books: 2000,
+      books: 3000,
       clothes: 9800,
       electronic: 2290,
     },
     {
       name: "Wed",
-      books: 2780,
+      books: 5672,
       clothes: 3908,
       electronic: 2000,
     },
     {
       name: "Thu",
-      books: 1890,
-      clothes: 4800,
+      books: 4562,
+      clothes: 45,
       electronic: 2181,
     },
     {
@@ -56,7 +56,7 @@ const AreaChartBox = () => {
 
   return (
     <div className="area-chart-box">
-      <h3>Revenue</h3>
+      <h3>Sell Reports</h3>
       <div className="chart-wrapper">
         <ResponsiveContainer width={"99%"} height={200}>
           <AreaChart

@@ -3,15 +3,15 @@ import "./PieChartBox.scss";
 
 const PieChartBox = () => {
   const data = [
-    { name: "Mobile", value: 400, color: "#209ff6" },
-    { name: "Desktop", value: 300, color: "#62b638" },
-    { name: "Laptop", value: 300, color: "#FFBB28" },
-    { name: "Tablet", value: 200, color: "#f42d2d" },
+    { name: "Mobile", value: 950, color: "#209ff6" },
+    { name: "Desktop", value: 800, color: "#62b638" },
+    { name: "Laptop", value: 1300, color: "#FFBB28" },
+    { name: "Tablet", value: 1200, color: "#f42d2d" },
   ];
 
   return (
     <div className="pie-chart-box-container">
-      <h3>Leads by Source</h3>
+      <h3>Sell Items</h3>
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height={200}>
           <PieChart>

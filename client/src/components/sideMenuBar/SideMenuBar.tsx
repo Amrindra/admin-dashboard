@@ -1,5 +1,5 @@
 import "./SideMenuBar.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { menu } from "../../utils/data";
 
 const SideMenuBar = () => {
@@ -9,10 +9,17 @@ const SideMenuBar = () => {
         <div className="item" key={item.id}>
           {/* <span className="title">{item.title}</span> */}
           {item.listItems.map((listItem) => (
-            <Link to={listItem.url} className="list-item" key={listItem.id}>
+            // <div className="list-item">
+            <NavLink
+              to={listItem.url}
+              key={listItem.id}
+              className={`list-item ${(navData: any) =>
+                navData.isActive ? "active " : ""}`}
+            >
               <img src={listItem.icon} alt={`${listItem.title} icon`} />
               <span className="list-item-title">{listItem.title}</span>
-            </Link>
+            </NavLink>
+            // </div>
           ))}
         </div>
       ))}

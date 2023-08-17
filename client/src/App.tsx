@@ -23,7 +23,7 @@ function App() {
           element: <UserPage />,
         },
         {
-          path: "/users/:id",
+          path: "/profile/:id",
           element: <SingleUserPage />,
         },
         {

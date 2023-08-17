@@ -16,6 +16,10 @@
     align-items: center;
     font-weight: bold;
     gap: 10px;
+
+    img{
+      width: 40px;
+    }
   }
 
   .icons {
@@ -24,11 +28,46 @@
     gap: 20px;
 
     .icon{
+      padding: 8px;
+      cursor: pointer;
+
+
       @include sm{
         display: none;
       }
     }
 
+    .search-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // .expanded{
+    //   border: 1px solid white;
+    // }
+
+    .search-bar {
+      // position: relative;
+      display: flex;
+      align-items: center;
+      // width: 200px;
+    
+      .search-input {
+        display: none;
+        padding: 8px;
+        // border: 1px solid #ccc;
+        // border-radius: 4px;
+        width: 200px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        
+        &:focus{
+          // width: 100%;
+        }
+      }
+    }
+    
     .notification {
       position: relative;
 
