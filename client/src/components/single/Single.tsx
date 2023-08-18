@@ -60,11 +60,12 @@ const Single = (props: Props) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                {props.chart.dataKeys.map((dataKey) => (
+                {props.chart.dataKeys.map((dataKey, index) => (
                   <Line
                     type="monotone"
                     dataKey={dataKey.name}
                     stroke={dataKey.color}
+                    key={index}
                   />
                 ))}
               </LineChart>

@@ -36,10 +36,12 @@ const DataTable = ({ columns, rows, slug }: Props) => {
     headerName: "Action",
     width: 200,
     renderCell: (params) => {
+      // console.log(params);
+
       return (
         <div className="action">
           <Link to={`/${slug}/${params.row.id}`}>
-            <img src="/viewIcon.svg" alt="" />
+            <img src="/viewIcon.svg" alt="view icon" />
           </Link>
           <div className="delete" onClick={() => handleDelete(params.row.id)}>
             <img src="/deleteIcon.svg" alt="This is a delete icon" />

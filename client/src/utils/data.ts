@@ -12,7 +12,7 @@ export const menu = [
       {
         id: 2,
         title: 'Profile',
-        url: '/profile/1',
+        url: '/users/1',
         icon: 'profileIcon.svg',
       },
     ],
@@ -636,6 +636,7 @@ export const singleUser = {
     },
   ],
 };
+
 export const singleProduct = {
   id: 1,
   title: 'Playstation 5 Digital Edition',
