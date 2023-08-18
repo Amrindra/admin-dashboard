@@ -35,7 +35,7 @@ const Single = (props: Props) => {
           <div className="details">
             {Object.entries(props.info).map((item) => (
               <div className="item" key={item[0]}>
-                <span className="item-title">{item[0]} </span>
+                <span className="item-title">{item[0]}: </span>
                 <span className="item-value">{item[1]}</span>
               </div>
             ))}
@@ -44,7 +44,7 @@ const Single = (props: Props) => {
 
         {props.chart && (
           <div className="single-chart">
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="99%" height="100%">
               <LineChart
                 width={500}
                 height={300}
@@ -80,7 +80,7 @@ const Single = (props: Props) => {
           <ul>
             {props.activities.map((activity) => (
               <li key={activity.text}>
-                <div>
+                <div className="desc">
                   <p>{activity.text}</p>
                   <time>{activity.time}</time>
                 </div>

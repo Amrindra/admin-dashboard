@@ -1,4 +1,4 @@
-export const users = [
+export let users = [
   {
     id: 1,
     img: "https://cdn.pixabay.com/photo/2017/11/29/09/15/paint-2985569_1280.jpg",
@@ -151,7 +151,7 @@ export const users = [
   },
 ];
 
-export const products = [
+export let products = [
   {
     id: 1,
     img: "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dw1b537bbb/images/PLAYSTATION5W/PLAYSTATION5W.png",

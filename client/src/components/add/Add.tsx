@@ -90,6 +90,7 @@ const Add = ({ slug, columns, setIsOpen }: Props) => {
                   placeholder={column.field}
                   name={column.field}
                   onChange={handleChange}
+                  required={true}
                 />
               </div>
             ))}
