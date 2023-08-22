@@ -558,7 +558,7 @@ export const products = [
 export const singleUser = {
   id: 1,
   title: 'John Doe',
-  img: 'https://images.pexels.com/photos/17397364/pexels-photo-17397364.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
+  img: 'https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg',
   info: {
     username: 'Johndoe99',
     fullname: 'John Doe',

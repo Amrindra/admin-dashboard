@@ -20,6 +20,12 @@
     img{
       width: 40px;
     }
+
+    span{
+      @include md{
+        display: none;
+      }
+    }
   }
 
   .icons {
@@ -48,19 +54,12 @@
     // }
 
     .search-bar {
-      // position: relative;
       display: flex;
       align-items: center;
-      // width: 200px;
     
       .search-input {
-        display: none;
         padding: 8px;
-        // border: 1px solid #ccc;
-        // border-radius: 4px;
         width: 200px;
-        -webkit-transition: width 0.4s ease-in-out;
-        transition: width 0.4s ease-in-out;
         
         &:focus{
           // width: 100%;

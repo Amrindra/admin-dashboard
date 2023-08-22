@@ -9,7 +9,7 @@
   grid-auto-flow: dense;
   background-color: $main-color;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   color: rgb(47, 46, 46);
 
   @include xl{
@@ -21,7 +21,7 @@
   }
 
   @include md{
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     padding: 0;
   }
 
@@ -48,7 +48,9 @@
     grid-column: span 1;
     grid-row: span 3;
 
-   
+    @include md{
+      grid-row: span 1;
+    }
   }
 
   .box2 {
